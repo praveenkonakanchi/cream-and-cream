@@ -1,0 +1,38 @@
+.social-network-link {
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--basic-extra-light);
+  color: var(--second-background);
+  box-shadow: 0 0 0 2px var(--second-background);
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  &:hover {
+    color: var(--basic-extra-dark);
+  }
+
+  &:focus {
+    color: var(--basic-extra-dark);
+    box-shadow: 0 0 0 2px var(--basic-extra-dark);
+    outline: none;
+  }
+
+  &:active {
+    opacity: 50%;
+    box-shadow: 0 0 0 2px var(--special-light-pink);
+  }
+}
+
+.special-color-blue {
+  --second-background: var(--special-light-blue);
+}
+
+.special-color-yellow {
+  --second-background: var(--special-light-yellow);
+}

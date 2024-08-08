@@ -1,0 +1,26 @@
+@use '../../../styles/mixins' as *;
+
+.story-container {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  background-color: var(--basic-extra-light);
+
+  &--padding {
+    padding: 20px;
+  }
+
+  &--pink {
+    background-color: var(--special-pink);
+  }
+}
+
+.story-container__title {
+  @include h4;
+}
+
+.story-container__text {
+  @include p2;
+}

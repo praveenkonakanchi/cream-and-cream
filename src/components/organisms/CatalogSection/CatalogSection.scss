@@ -1,0 +1,40 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as v;
+
+.catalog-section {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: v.$mobile-width-only) {
+    gap: 20px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    gap: 40px;
+    min-height: 1400px;
+  }
+}
+
+.catalog-section__title {
+  margin: 0;
+
+  @media (max-width: v.$mobile-width-only) {
+    @include h3;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include h2;
+  }
+}
+
+.catalog-section__strict-filters-notice {
+  text-align: center;
+
+  @media (max-width: v.$mobile-width-only) {
+    @include h5;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include h4;
+  }
+}

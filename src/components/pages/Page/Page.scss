@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as v;
+
+.page-container {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  width: 100%;
+  max-width: 1366px;
+  min-width: 280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-shadow: var(--strong-shadow);
+
+  @media (max-width: v.$mobile-width-only) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding-left: 98px;
+    padding-right: 98px;
+  }
+}

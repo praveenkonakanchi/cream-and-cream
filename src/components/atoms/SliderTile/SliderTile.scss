@@ -1,0 +1,119 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as *;
+
+.ice-cream-list {
+  display: flex;
+  margin-left: 19px;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: v.$tablet-width-only) {
+    justify-content: center;
+  }
+}
+
+.special-color-blue {
+  --second-background: var(--special-light-blue);
+}
+
+.special-color-yellow {
+  --second-background: var(--special-light-yellow);
+}
+
+.ice-cream-item {
+  position: relative;
+  width: 100px;
+  min-width: 100px;
+  min-height: 150px;
+  opacity: 0.4;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 100%;
+    padding: 50%;
+    border-radius: 50%;
+    background-color: var(--second-background);
+  }
+
+  &--active {
+    margin-right: 16px;
+    opacity: 1;
+
+    @media (max-width: v.$mobile-width-only) {
+      width: 200px;
+      min-width: 200px;
+      min-height: 300px;
+    }
+
+    @media (min-width: v.$tablet-width) {
+      width: 306px;
+      min-width: 306px;
+      height: 507px;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@media (max-width: v.$tablet-width-only) {
+  .ice-cream-item:not(.ice-cream-item--active) {
+    display: none;
+  }
+}
+
+.ice-cream-item__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--basic-extra-light);
+  background-color: rgba(252, 252, 252, 0.3);
+  color: var(--basic-extra-light);
+  z-index: 1;
+
+  &--previous {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--next {
+    right: 0;
+    transform: translate(50%, -50%) rotate(180deg);
+  }
+
+  &--active {
+    display: grid;
+    place-content: center;
+  }
+
+  &:hover {
+    background-color: var(--basic-extra-light);
+    color: var(--basic-extra-dark);
+  }
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--basic-extra-dark);
+    color: var(--basic-extra-dark);
+  }
+
+  &:active {
+    background-color: rgba(252, 252, 252, 0.5);
+    box-shadow: none;
+    color: var(--basic-extra-dark);
+  }
+}

@@ -1,0 +1,45 @@
+// Viewports
+$tablet-width: 768px;
+$tablet-width-only: 1199px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+:root {
+  // Basic font
+  --basic-font: 'Inter', 'Arial', sans-serif;
+
+  // Basic colors
+  --basic-extra-dark: #2d3440;
+  --basic-dark: #565c66;
+  --basic-neutral: #b9b9b9;
+  --basic-light: #e7e7e7;
+  --basic-extra-light: #fcfcfc;
+  --basic-extra-light-hover: rgba(252, 252, 252, 0.5);
+  --basic-extra-light-icon: rgba(252, 252, 252, 0.3);
+  --basic-white: #ffffff;
+
+  // Special colors
+  --special-extra-bright: #ff2f64;
+  --special-bright: #ff4a78;
+  --special-neutral: #ff7799;
+  --special-pink: #feafc3;
+  --special-light-pink: #ffcbd8;
+  --special-blue: #69a9ff;
+  --special-light-blue: #9fc8ff;
+  --special-yellow: #fcc850;
+  --special-light-yellow: #fcdc92;
+
+  // Status colors
+  --status-error: #ea5454;
+  --status-warning: #fd912e;
+  --status-success: #00e484;
+
+  // Shadows
+  --soft-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  --medium-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  --strong-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
+  --additional-shadow: 0px 4px 15px rgba(133, 133, 133, 0.15);
+
+  // Color of the background that is changed in SliderTile, SocialButtons
+  --second-background: var(--special-light-pink);
+}
