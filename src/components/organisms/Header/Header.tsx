@@ -84,32 +84,32 @@ const Header = ({ basicNavigationArray, 'data-testid': testId }: IHeader) => {
 
   const { backgroundColor } = offers[activeItemIndex];
   return (
-    <header className='header' ref={headerRef}>
+    <header className="header" ref={headerRef}>
       <GllacyLogo data-testid={testId} />
       <nav className={cx('header__navigation', 'navigation', isClosed && 'navigation--closed')}>
         <button
-          className='navigation__menu-toggle'
+          className="navigation__menu-toggle"
           ref={menuToggleRef}
-          type='button'
+          type="button"
           onClick={onMenuToggleHandler}
           data-testid={`${testId}-menu-toggle`}
         >
-          <span className='visually-hidden'>{menuToggleText}</span>
+          <span className="visually-hidden">{menuToggleText}</span>
           {!isClosed && <Cross data-testid={`${testId}-cross-icon`} />}
           {isClosed && <ToggleMenu />}
         </button>
         <div
-          className='navigation__container'
+          className="navigation__container"
           ref={navigationContainerRef}
           style={{ top: headerRef.current?.clientHeight || 0, backgroundColor: `var(--special-${backgroundColor})` }}
         >
-          <ul className='navigation__basic-list'>{basicNavigation}</ul>
-          <a href='tel:+1111111111' className='navigation__phone'>
-            +1-111-111-111
+          <ul className="navigation__basic-list">{basicNavigation}</ul>
+          <a href="tel:+9203333424" className="navigation__phone">
+            +1-920-333-3424
           </a>
-          <LangToggle className='navigation__language-toggle' data-testid={testId} />
-          <ul className='navigation__user-list'>
-            <li className='navigation__user-item'>
+          <LangToggle className="navigation__language-toggle" data-testid={testId} />
+          <ul className="navigation__user-list">
+            <li className="navigation__user-item">
               <Popup
                 data-testid={`${testId}-popup-signIn`}
                 openingButtonIcon={<LogIn />}
@@ -118,7 +118,7 @@ const Header = ({ basicNavigationArray, 'data-testid': testId }: IHeader) => {
                 <SignInTile data-testid={testId} />
               </Popup>
             </li>
-            <li className='navigation__user-item'>
+            <li className="navigation__user-item">
               <Popup
                 data-testid={`${testId}-popup-cart`}
                 openingButtonIcon={<Cart />}

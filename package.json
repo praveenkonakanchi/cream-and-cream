@@ -1,5 +1,5 @@
 {
-  "name": "ice-cream-shop",
+  "name": "cream-and-scream",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://.",
@@ -121,5 +121,5 @@
     "workerDirectory": "public"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "ice-cream-shop@0.1.0"
+  "_id": "cream-and-scream@0.1.0"
 }

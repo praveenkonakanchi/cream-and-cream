@@ -12,7 +12,7 @@ interface IGllacyLogo {
 
 const GllacyLogo = ({ className, 'data-testid': testId }: IGllacyLogo) => {
   return (
-    <Link className={cx('gllacy-logo', className)} data-testid={`${testId}-gllacy-logo`} to='/main'>
+    <Link className={cx('gllacy-logo', className)} data-testid={`${testId}-gllacy-logo`} to="/main">
       <Gllacy />
     </Link>
   );
