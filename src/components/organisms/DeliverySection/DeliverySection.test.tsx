@@ -12,8 +12,8 @@ import {
 const TestComponent = () => {
   return (
     <div>
-      <GlobalMessage data-testid='demo' />
-      <DeliverySection data-testid='demo' />
+      <GlobalMessage data-testid="demo" />
+      <DeliverySection data-testid="demo" />
     </div>
   );
 };
@@ -23,7 +23,7 @@ describe('Delivery Section Tests', () => {
     render(<TestComponent />);
     expect(screen.getByTestId('demo-delivery-section')).toBeInTheDocument();
     await userEvent.type(screen.getByTestId('demo-date-input'), '02.04.2020');
-    await userEvent.type(screen.getByTestId('demo-phone-input'), '+1111111111');
+    await userEvent.type(screen.getByTestId('demo-phone-input'), '+9203333424');
     await userEvent.type(screen.getByTestId('demo-address-input'), 'test address');
     mswServer.use(postRequestWithoutDelaySuccess);
     await userEvent.click(screen.getByTestId('demo-button'));
@@ -36,7 +36,7 @@ describe('Delivery Section Tests', () => {
   it('unsuccessful submission', async () => {
     render(<TestComponent />);
     await userEvent.type(screen.getByTestId('demo-date-input'), '01.04.2020');
-    await userEvent.type(screen.getByTestId('demo-phone-input'), '+1111111111');
+    await userEvent.type(screen.getByTestId('demo-phone-input'), '+9203333424');
     await userEvent.type(screen.getByTestId('demo-address-input'), 'test address');
     mswServer.use(postRequestWithoutDelayError);
     await userEvent.click(screen.getByTestId('demo-button'));
